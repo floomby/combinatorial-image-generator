@@ -1,13 +1,51 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.nodeworkspace {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+}
+
+.nodeworkspace aside {
+    border-right: 1px solid #eee;
+    padding: 15px 10px;
+    font-size: 12px;
+    background: #fcfcfc;
+}
+
+.nodeworkspace aside > * {
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+.nodeworkspace aside .description {
+    margin-bottom: 10px;
+}
+
+.nodeworkspace .reactflow-wrapper {
+    flex-grow: 1;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .nodeworkspace {
+        flex-direction: row;
+    }
+
+    .nodeworkspace aside {
+        width: 20%;
+        max-width: 180px;
+    }
 }
